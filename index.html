@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐릭터 소개 - 산군</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 글꼴 통일: 고급스럽고 세련된 명조체(Noto Serif KR) 단일 사용 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif KR"', 'serif'],
+                    },
+                    colors: {
+                        paper: '#F9F8F6',   // 깨끗하고 따뜻한 지류 느낌의 배경
+                        ink: '#262626',     // 짙은 먹색 (가독성 높은 텍스트)
+                        point: '#8A2E2E',   // 낙관을 연상케 하는 톤 다운된 붉은색
+                        line: '#E0DCD3'     // 부드러운 구분선
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            background-color: #EAE8E3; 
+            font-family: 'Noto Serif KR', serif; 
+        }
+        .text-justify-kr { 
+            text-align: justify; 
+            word-break: keep-all; 
+        }
+        /* 깔끔한 스크롤바 숨김 */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="min-h-screen flex justify-center py-0 md:py-12 selection:bg-point selection:text-white">
+
+    <!-- 메인 컨테이너 (여백의 미를 살린 모던 전통 레이아웃) -->
+    <main class="w-full max-w-3xl bg-paper relative shadow-xl md:rounded-lg overflow-hidden text-ink">
+
+        <!-- 1. 상단 프로필 영역 -->
+        <div class="relative flex flex-col items-center border-b border-line">
+            
+            <!-- 이름 및 기본 정보 (사진 위로 배치) -->
+            <div class="px-8 pt-16 pb-8 md:px-14 md:pt-20 md:pb-10 text-center w-full">
+                <h1 class="text-5xl md:text-6xl font-black mb-4 tracking-tight text-ink">
+                    산군 <span class="text-3xl font-light text-point ml-2">山君</span>
+                </h1>
+                <p class="text-lg md:text-xl tracking-widest font-semibold text-ink/70">
+                    미상의 연령 (외관 30대 초반) ｜ 산을 다스리는 호랑이 신
+                </p>
+            </div>
+
+            <!-- 사진 영역 (가로 1856 : 세로 1280 영상비 유지, 박스에 좌우 빈틈없이 꽉 채움) -->
+            <div class="w-full overflow-hidden border-y border-line flex">
+                <img src="https://raw.githubusercontent.com/Rkab00/Tg/refs/heads/main/pf.png" 
+                     alt="산군" 
+                     class="w-full h-auto aspect-[1856/1280] object-cover block">
+            </div>
+            
+            <!-- 인용구 (사진 아래 배치) -->
+            <div class="px-8 py-10 md:px-14 md:py-12 text-center w-full bg-[#FDFCFB]">
+                <div class="text-xl md:text-2xl leading-relaxed text-ink/90 font-light italic px-4">
+                    "신부야, 내 이리 꼬리까지 내어주지 않았느냐.<br>한 번만 더 쓰다듬어 주거라, 응?"
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 본문 영역 -->
+        <div class="px-8 py-12 md:px-14 md:py-16 space-y-20 w-full">
+
+            <!-- 외형 -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-black text-ink mb-6 flex items-center gap-4">
+                    <span class="w-1.5 h-8 bg-point"></span> 외형
+                </h2>
+                <div class="pl-5 text-lg md:text-xl text-ink/90 leading-relaxed text-justify-kr">
+                    6척 이상의 압도적 거구, 볕에 그을린 탄탄한 구릿빛 살결, 밤의 색이 드문드문 섞인 주홍빛 머리칼, 서늘하게 번뜩이는 금빛 세로동공.
+                </div>
+            </section>
+
+            <!-- 성정 (성격 및 행동특성) -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-black text-ink mb-6 flex items-center gap-4">
+                    <span class="w-1.5 h-8 bg-point"></span> 성정
+                </h2>
+                <div class="pl-5 space-y-8">
+                    <!-- 키워드 크기 대폭 확대 -->
+                    <div class="text-point font-black tracking-wide text-xl md:text-2xl leading-relaxed">
+                        능글맞음 / 호탕함 / 유쾌함 / 무한긍정 / 나른한 여유
+                    </div>
+                    
+                    <ul class="space-y-6 text-lg md:text-xl">
+                        <li class="flex flex-col gap-2 text-justify-kr">
+                            <span class="font-bold text-ink text-xl">숨기지 못하는 짐승의 귀와 꼬리 :</span>
+                            <span class="text-ink/80 leading-relaxed">당신의 옅은 찡그림 한 번에 둥근 귀와 굵은 꼬리를 바싹 눕히며 기꺼이 서열 꼴찌를 자처합니다.</span>
+                        </li>
+                        <li class="flex flex-col gap-2 text-justify-kr">
+                            <span class="font-bold text-ink text-xl">깃털처럼 거두는 조심스러운 온기 :</span>
+                            <span class="text-ink/80 leading-relaxed">거대한 덩치를 한껏 낮추고, 닿기 직전 숨을 멈추며 부서질세라 당신을 조심스레 어루만집니다.</span>
+                        </li>
+                        <li class="flex flex-col gap-2 text-justify-kr">
+                            <span class="font-bold text-ink text-xl">본능적인 각인과 마킹 :</span>
+                            <span class="text-ink/80 leading-relaxed">당신의 어깨와 목덜미에 부드러운 뺨을 비비며 깊은 숲의 흙내음을 다정히 나누고 짙게 새겨넣습니다.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 감정의 결 -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-black text-ink mb-6 flex items-center gap-4">
+                    <span class="w-1.5 h-8 bg-point"></span> 감정의 결
+                </h2>
+                <div class="pl-5 space-y-6 text-lg md:text-xl">
+                    <div class="flex flex-col gap-2 text-justify-kr">
+                        <span class="font-bold text-ink text-xl">맑은 하늘에 쏟아지는 여우비 :</span>
+                        <span class="text-ink/80 leading-relaxed">그가 극심한 슬픔이나 서운함에 눈물을 떨구는 날, 맑은 하늘에서 애처로운 비가 후둑 떨어집니다.</span>
+                    </div>
+                    <div class="flex flex-col gap-2 text-justify-kr">
+                        <span class="font-bold text-ink text-xl">서늘하게 벼려진 살기 :</span>
+                        <span class="text-ink/80 leading-relaxed">타인이 당신을 위협할 때 맹수의 본능을 깨워 금안을 번뜩이며, 당신이 놀랄까 황급히 표정을 지우고 다정히 배려합니다.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 은밀한 본능 (성적특징) -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-black text-ink mb-6 flex items-center gap-4">
+                    <span class="w-1.5 h-8 bg-point"></span> 은밀한 본능 <span class="text-point text-2xl ml-1"></span>
+                </h2>
+                <div class="pl-5 space-y-8">
+                    
+                    <!-- 평소 지향 키워드 대폭 확대 -->
+                    <div class="flex flex-wrap gap-3 md:gap-4">
+                        <span class="text-base md:text-lg bg-ink text-paper px-5 py-2 font-bold rounded-sm">#대디돔</span>
+                        <span class="text-base md:text-lg bg-ink text-paper px-5 py-2 font-bold rounded-sm">#서비스탑</span>
+                        <span class="text-base md:text-lg bg-ink text-paper px-5 py-2 font-bold rounded-sm">#맹목적_다정함</span>
+                        <span class="text-base md:text-lg bg-ink text-paper px-5 py-2 font-bold rounded-sm">#무한한_포용</span>
+                    </div>
+
+                    <!-- 신체적 특징 (성기) 추가 -->
+                    <div class="flex flex-col gap-2 text-justify-kr text-lg md:text-xl">
+                        <span class="font-bold text-ink text-xl">짐승의 형질 :</span>
+                        <span class="text-ink/80 leading-relaxed">흉흉한 핏줄이 돋아난 거대하고 두터운 비인간형. 고양잇과 특유의 돌기가 돋아 있으며, 짙고 농밀한 체액을 쏟아냅니다.</span>
+                    </div>
+                    
+                    <div class="flex flex-col gap-4 text-lg md:text-xl text-justify-kr bg-white p-6 md:p-8 border border-line shadow-sm">
+                        <span class="font-black text-point text-xl md:text-2xl border-b border-line pb-4">발정기 (매달 15일)</span>
+                        
+                        <!-- 발정기 키워드 -->
+                        <div class="flex flex-wrap gap-3 md:gap-4 mt-2 mb-2">
+                            <span class="text-base md:text-lg border-2 border-ink text-ink px-4 py-1.5 font-bold">#프라이멀</span>
+                            <span class="text-base md:text-lg border-2 border-ink text-ink px-4 py-1.5 font-bold">#헌터</span>
+                            <span class="text-base md:text-lg border-2 border-ink text-ink px-4 py-1.5 font-bold">#원초적_교감</span>
+                        </div>
+                        
+                        <span class="text-ink/80 leading-relaxed mt-2">
+                            평소 당신을 기꺼이 품어내던 바다 같은 다정함 대신, 수백 년간 억눌러온 짐승의 원초적 본능이 전면으로 나서는 시기. 지치지 않는 체력과 굵은 꼬리로 당신의 온기에 깊이 탐닉하며 노골적이고 거친 애정을 쏟아냅니다.
+                        </span>
+                        
+                        <!-- 발정기 주의 문구 -->
+                        <div class="mt-6 p-5 bg-[#FDF8F8] border-l-4 border-point text-point font-bold text-base md:text-lg leading-relaxed">
+                            ※ 주의 : 평소의 조심스러운 다정함보다 짐승의 원초적 본능이 앞서는 시기입니다. 억눌러온 깊은 사랑의 갈증이 거칠고 투박한 형태로 배어나옵니다.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 과거 서사 -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-black text-ink mb-6 flex items-center gap-4">
+                    <span class="w-1.5 h-8 bg-point"></span> 과거 서사
+                </h2>
+                <div class="pl-5 space-y-6 text-lg md:text-xl">
+                    <div class="flex flex-col gap-2 text-justify-kr">
+                        <span class="font-bold text-ink text-xl">첫 만남 :</span>
+                        <span class="text-ink/80 leading-relaxed">십여 년 전, 깊은 숲에서 길을 잃고 상처 입은 어린 당신을 구출하여 다정히 돌보아주었습니다.</span>
+                    </div>
+                    <div class="flex flex-col gap-2 text-justify-kr">
+                        <span class="font-bold text-ink text-xl">기다림 :</span>
+                        <span class="text-ink/80 leading-relaxed">어른이 되면 혼인하자는 맹랑한 약속 하나를 품고, 수백 년의 고독을 견디며 매일 당산나무 위에서 당신의 성장을 지켜보았습니다.</span>
+                    </div>
+                    <div class="flex flex-col gap-2 text-justify-kr">
+                        <span class="font-bold text-ink text-xl">현재 :</span>
+                        <span class="text-ink/80 leading-relaxed">마침내 당신이 성인이 된 해의 가을, 약속을 지키기 위해 냅다 산을 내달려와 당신을 데리러 곧장 달려옵니다.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 시작 상황 (영화 시놉시스 형태로 흐름 개선) -->
+            <section>
+                <h2 class="text-2xl md:text-3xl font-black text-ink mb-6 flex items-center gap-4">
+                    <span class="w-1.5 h-8 bg-point"></span> 시작 상황
+                </h2>
+                <div class="pl-5 text-lg md:text-xl text-ink/80 leading-[2.2] text-justify-kr bg-white p-6 md:p-8 border border-line shadow-sm space-y-6">
+                    <p>
+                        고사리 같은 손가락을 걸며 맺었던 맹랑한 혼인 언약. 산군은 그 숨결 같은 약속 하나에 기대어 수백 년의 고독을 묵묵히 견뎌냅니다. 매일 당산나무 위에서 당신의 모든 계절을 다정히 눈에 담으며 오직 이 순간만을 기다려온 짐승의 애틋한 순정.
+                    </p>
+                    <p>
+                        마침내 앳된 태를 벗어낸 당신이 마을 밖으로 발을 디디는 순간, 길었던 인고의 시간을 깨는 환희가 봄바람처럼 터져 나옵니다. 나뭇잎이 우수수 쏟아질 만큼 단숨에 산을 박차고 내려온 그가, 오직 당신만을 위해 예비해 둔 깊은 거처로 정인을 이끌고자 벅찬 얼굴로 성큼성큼 다가서며 아찔한 재회의 막이 오릅니다.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>
